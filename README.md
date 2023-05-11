@@ -1,2 +1,0 @@
-# rta-management-service
-

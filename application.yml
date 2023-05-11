@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    producer:
+      retries: 3
+      compression-type: gzip
+    consumer:
+      group-id: consumer-1
+      auto-offset-reset: earliest
+      properties:
+        partition.assignment.strategy: org.apache.kafka.clients.consumer.RoundRobinAssignor
+    bootstrap-servers: rta-kafka:9092
+    properties:
+      ssl.endpoint.identification.algorithm: ""
+      sasl.mechanism: PLAIN
+      security.protocol: SASL_PLAINTEXT
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="rta" password="1234qwer";
+app-props:
+  security:
+    username: admin
+    password: admin
+    role: USER
