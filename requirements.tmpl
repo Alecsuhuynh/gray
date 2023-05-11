@@ -1,0 +1,5 @@
+# Install a role from Git
+- name:    gitlab_fetch_files
+  src:     https://${CI_JOB_USER}:${CI_JOB_TOKEN}@vn-gitlabc.code88.asia/system/ansible-roles/gitlab_fetch_files.git
+  version: origin/master
+  scm:     git
