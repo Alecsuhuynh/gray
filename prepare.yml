@@ -14,3 +14,14 @@
       - path: qat-rta-config
         dest: .
         project_path: system/secret/system_lab
+        
+        
+  tasks:
+  - import_role:
+      name: gitlab_push_files
+    vars:
+      giltab_fetch_files_gitlab_private_token: "{{ global_gitlab_token }}"
+      files:
+      - path: qat-rta-config
+        dest: .
+        project_path: system/secret/system_lab
